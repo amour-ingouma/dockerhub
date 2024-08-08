@@ -45,13 +45,13 @@ stages:
     steps:
       - task: AzureRmWebAppDeployment@3
         inputs:
-          azureSubscription: 'Azure subscription 1'
+          azureSubscription: 'Azure subscription 1(6ca0035d-99b9-4d7c-a6cd-b3902b80e501)'
           appType: 'applinux'
           WebAppName: 'dockerhubert'
           DockerNamespace: '$(containerRegistry)'
           DockerRepository: '$(imageRepository)'
           DockerImageTag: '$(Build.BuildId)'
-          WebAppUri: webAppUrl
+          WebAppUri: 'webAppUrl'
           TakeAppOfflineFlag: true
           UseWebDeploy: true
           RenameFilesFlag: true
